@@ -29,7 +29,6 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 /* Dark mode (applied via .dark on body) */
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -87,10 +86,6 @@ body {
     margin: 5px 0;
     transition: 0.3s ease;
     border-radius: 2px;
-}
-.theme-toggle i { font-size: 0.95rem; }
-@media (max-width: 768px) {
-    .theme-toggle { margin-left: 8px; }
 }
 /* ==================== SEKCJA HERO ==================== */
 .hero {
@@ -230,7 +225,6 @@ section {
     display: inline-block;
     width: 100%;
 }
-
 /* ==================== SEKCJA O MNIE ==================== */
 .about {
     background-color: var(--light-bg);
