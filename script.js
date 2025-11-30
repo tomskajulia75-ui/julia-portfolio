@@ -160,33 +160,3 @@ console.log('%cWitaj! 👋', 'font-size: 24px; font-weight: bold; color: #6366f1
 console.log('%cZainteresowany kodem tej strony?', 'font-size: 14px; color: #64748b;');
 console.log('%cOtworz DevTools i przeglądaj kod! 🔍', 'font-size: 12px; color: #94a3b8;');
 
-// ==================== THEME TOGGLE (dark / light) ====================
-const themeToggle = document.getElementById('theme-toggle');
-const preferredTheme = localStorage.getItem('theme');
-
-const applyTheme = (theme) => {
-    if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-        if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-        document.documentElement.classList.remove('dark');
-        if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-};
-
-// Initialize theme from localStorage or system preference
-if (preferredTheme) {
-    applyTheme(preferredTheme);
-} else {
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    applyTheme(prefersDark ? 'dark' : 'light');
-}
-
-if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-        const isDark = document.documentElement.classList.toggle('dark');
-        const newTheme = isDark ? 'dark' : 'light';
-        localStorage.setItem('theme', newTheme);
-        applyTheme(newTheme);
-    });
-}
