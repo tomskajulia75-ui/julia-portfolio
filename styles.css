@@ -23,10 +23,23 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-dark);
     background-color: #ffffff;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode (applied via .dark on body) */
+.dark {
+    --primary-color: #7c83ff;
+    --secondary-color: #5b21b6;
+    --accent-color: #fb7185;
+    --dark-bg: #071025;
+    --light-bg: #081226;
+    --text-dark: #e6eef8;
+    --text-light: #9fb4d1;
+    --border-color: rgba(255,255,255,0.06);
 }
 
 .container {
@@ -92,6 +105,25 @@ body {
     margin: 5px 0;
     transition: 0.3s ease;
     border-radius: 2px;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.12);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    margin-left: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.theme-toggle i { font-size: 0.95rem; }
+
+@media (max-width: 768px) {
+    .theme-toggle { margin-left: 8px; }
 }
 
 /* ==================== SEKCJA HERO ==================== */
