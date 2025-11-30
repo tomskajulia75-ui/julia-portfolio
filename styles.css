@@ -52,7 +52,7 @@ body {
 
 /* ==================== NAWIGACJA ==================== */
 .navbar {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        background: #000000;
     color: white;
     padding: 1rem 0;
     position: sticky;
